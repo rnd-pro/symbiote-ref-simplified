@@ -17,6 +17,7 @@ app-shell {
     grid-area: header;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--gap-mid);
     background-color: var(--bg-light);
   }

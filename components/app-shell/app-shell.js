@@ -9,6 +9,10 @@ export default class AppShell extends Symbiote {
   changeLang(e) {
     this.$['app/currentLang'] = e.target.value;
   }
+
+  renderCallback() {
+    console.log(this.notify('router/title'));
+  }
 }
 
 AppShell.rootStyles = styles;

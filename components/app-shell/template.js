@@ -2,7 +2,9 @@ import { html } from '@symbiotejs/symbiote';
 
 export default html`
 <header>
+  <img src="https://rnd-pro.com/svg/symbiote/index.svg" alt="Symbiote.js" width="36">
   <span>Symbiote.js Iso-reference</span>
+  <span ${{textContent: 'router/title'}}></span>
   <select ${{onchange: 'changeLang'}}>
     <option value="en">English</option>
     <option value="ru">Русский</option>
