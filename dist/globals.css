@@ -1,0 +1,31 @@
+:root {
+  --accent-color: #007bff;
+  --text-color: #fff;
+  --bg-color: #212529;
+
+  --bg-light: rgba(255, 255, 255, .1);
+  --bg-dark: rgba(0, 0, 0, .2);
+
+  --gap-min: 2px;
+  --gap-mid: 10px;
+  --gap-max: 20px;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentColor;
+}

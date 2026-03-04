@@ -11,6 +11,6 @@ let html = await SSR.processHtml('<app-shell></app-shell>');
 // cleanup globals
 SSR.destroy();
 
-const template = fs.readFileSync('./mein-tpl.html', 'utf-8');
+const template = fs.readFileSync('./node/mein-tpl.html', 'utf-8');
 html = template.replace('{{CONTENT}}', html);
 fs.writeFileSync('./dist/index.html', html);

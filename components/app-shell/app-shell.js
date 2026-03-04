@@ -4,6 +4,11 @@ import styles from './styles.js';
 
 export default class AppShell extends Symbiote {
   isoMode = true;
+  sectionHtml = '';
+
+  changeLang(e) {
+    this.$['app/currentLang'] = e.target.value;
+  }
 }
 
 AppShell.rootStyles = styles;
