@@ -8,20 +8,10 @@ nav-menu {
   background-color: var(--bg-dark);
 
   nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-mid);
     height: 100%;
-    
-    ul {
-      list-style: none;
-    }
-
-    ul li {
-      display: inline-block;
-    }
-
-    ul li a {
-      color: var(--text-color);
-    }
   }
 }
 `;

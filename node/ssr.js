@@ -7,7 +7,9 @@ await SSR.init();
 // Import components for node runtime:
 await import('./node-imports.js');
 
-let html = await SSR.processHtml('<app-shell></app-shell>');
+let html = await SSR.processHtml('<app-shell></app-shell>', {
+  nonce: Date.now().toString(36),
+});
 // cleanup globals
 SSR.destroy();
 
