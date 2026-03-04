@@ -10,8 +10,8 @@ export default class AppShell extends Symbiote {
     this.$['app/currentLang'] = e.target.value;
   }
 
-  renderCallback() {
-    console.log(this.notify('router/title'));
+  initCallback() {
+    this.notify('router/title');
   }
 }
 

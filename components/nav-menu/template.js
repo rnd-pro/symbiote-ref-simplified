@@ -1,9 +1,9 @@
 import { html } from '@symbiotejs/symbiote';
 
 export default html`
-<nav>
-  <a href="./" ${{textContent: 'l10n/home'}}></a>
-  <a href="./?r=about" ${{textContent: 'l10n/about'}}></a>
-  <a href="./?r=contact" ${{textContent: 'l10n/contact'}}></a>
+<nav ref="nav" ${{onclick: 'onNav'}}>
+  <a href="./" route="home" ${{textContent: 'l10n/Home'}}></a>
+  <a href="./dashboard/" route="dashboard" ${{textContent: 'l10n/Dashboard'}}></a>
+  <a href="./settings/" route="settings" ${{textContent: 'l10n/Settings'}}></a>
 </nav>
 `;

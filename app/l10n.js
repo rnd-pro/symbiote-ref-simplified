@@ -1,23 +1,39 @@
 import { PubSub } from '@symbiotejs/symbiote';
 import appCtx from './app.js';
 
-const langMap = {
-  en: {
-    'home': 'Home',
-    'about': 'About',
-    'contact': 'Contact',
-  },
+const l10nKeys = /** @type {const} */ ([
+  'Home',
+  'Dashboard',
+  'Settings',
+]);
 
+/** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
+const langMap = {
+  en: {},
   ru: {
-    'home': 'Дом',
-    'about': 'О нас',
-    'contact': 'Контакты',
+    'Home': 'Дом',
+    'Dashboard': 'Панель',
+    'Settings': 'Настройки',
+  },
+  es: {
+    'Home': 'Casa',
+    'Dashboard': 'Panel',
+    'Settings': 'Configuración',
   },
 }
 
-const l10n = PubSub.registerCtx(langMap.en, 'l10n');
+function getL10nData(lang) {
+  /** @type {Record<string, string>} */
+  const data = {};
+  l10nKeys.forEach((key) => {     
+    data[key] = langMap[lang][key] || key;
+  });
+  return data;
+}
+
+const l10n = PubSub.registerCtx(getL10nData(appCtx.read('currentLang')), 'l10n');
 appCtx.sub('currentLang', (lang) => {
-  l10n.multiPub(langMap[lang]);
+  l10n.multiPub(getL10nData(lang));
 });
 
 export default l10n;
