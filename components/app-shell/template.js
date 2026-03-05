@@ -2,9 +2,11 @@ import { html } from '@symbiotejs/symbiote';
 
 export default html`
 <header>
-  <img src="https://rnd-pro.com/svg/symbiote/index.svg" alt="Symbiote.js" width="36">
-  <span ${{textContent: 'app/appTitle'}}></span>
-  <span ${{textContent: 'router/title'}}></span>
+  <div class="logo">
+    <img src="https://rnd-pro.com/svg/symbiote/index.svg" alt="Symbiote.js" width="36">
+    <span ${{textContent: 'app/appTitle'}}></span>
+  </div>
+  <span ${{textContent: 'sectionTitle'}}></span>
   <select ${{onchange: 'changeLang'}}>
     <option value="en">English</option>
     <option value="es">Español</option>

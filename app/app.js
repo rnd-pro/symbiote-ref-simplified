@@ -1,6 +1,6 @@
 import { PubSub } from '@symbiotejs/symbiote';
 
 export default PubSub.registerCtx({
-  appTitle: 'Symbiote.js Iso-reference',
+  appTitle: 'Symbiote.js',
   currentLang: 'en',
 }, 'app');

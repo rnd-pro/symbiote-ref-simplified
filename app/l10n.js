@@ -2,7 +2,9 @@ import { PubSub } from '@symbiotejs/symbiote';
 import appCtx from './app.js';
 
 const l10nKeys = /** @type {const} */ ([
+  'trigger',
   'Home',
+  'Home page',
   'Dashboard',
   'Settings',
 ]);
@@ -11,12 +13,16 @@ const l10nKeys = /** @type {const} */ ([
 const langMap = {
   en: {},
   ru: {
+    'trigger': 'триггер',
     'Home': 'Дом',
+    'Home page': 'Домашняя страница',
     'Dashboard': 'Панель',
     'Settings': 'Настройки',
   },
   es: {
+    'trigger': 'disparador',
     'Home': 'Casa',
+    'Home page': 'Página de inicio',
     'Dashboard': 'Panel',
     'Settings': 'Configuración',
   },

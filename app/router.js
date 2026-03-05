@@ -1,6 +1,6 @@
 import { AppRouter } from '@symbiotejs/symbiote/core/full.js';
 
-export default AppRouter.initRoutingCtx('router', {
+export const routes = {
   home: {
     pattern: '/dist/',
     title: 'Home page',
@@ -14,4 +14,6 @@ export default AppRouter.initRoutingCtx('router', {
     pattern: '/dist/settings/',
     title: 'Settings',
   },
-});
+}
+
+export default AppRouter.initRoutingCtx('router', routes);

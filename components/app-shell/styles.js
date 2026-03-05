@@ -18,8 +18,17 @@ app-shell {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--gap-max);
     padding: var(--gap-mid);
+    padding-left: var(--gap-max);
+    padding-right: var(--gap-max);
     background-color: var(--bg-light);
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--gap-mid);
+    }
   }
 
   nav-menu {
