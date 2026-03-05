@@ -8,7 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "ssr": "node ./node/ssr.js"
+    "ssr": "node ./node/ssr.js",
+    "dev": "node ./node/server.js"
   },
   "dependencies": {
     "@symbiotejs/symbiote": "^3.3.5",
