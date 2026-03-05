@@ -16,6 +16,18 @@ export default class NavMenu extends Symbiote {
       AppRouter.navigate(route);
     }
   }
+
+  renderCallback() {
+    this.sub('router/route', (route) => {
+      this.ref.nav.querySelectorAll('a').forEach((el) => {
+        if (el.getAttribute('route') === route) {
+          el.setAttribute('current', '');
+        } else {
+          el.removeAttribute('current');
+        }
+      });
+    });
+  }
 }
 
 NavMenu.rootStyles = styles;

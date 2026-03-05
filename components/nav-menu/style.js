@@ -18,6 +18,11 @@ nav-menu {
     align-items: center;
     gap: var(--gap-mid);
     text-decoration: none;
+
+    &[current] {
+      color: var(--accent-color);
+      pointer-events: none;
+    }
   }
 }
 `;
