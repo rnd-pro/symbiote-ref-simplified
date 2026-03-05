@@ -11,7 +11,7 @@ let html = await SSR.processHtml('<app-shell></app-shell>', {
   nonce: Date.now().toString(36),
 });
 // cleanup globals
-// SSR.destroy();
+SSR.destroy();
 
 const template = fs.readFileSync('./node/mein-tpl.html', 'utf-8');
 html = template.replace('{{CONTENT}}', html);

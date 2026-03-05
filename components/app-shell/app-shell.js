@@ -5,7 +5,7 @@ import '../../sections/home/home-section.js';
 
 export default class AppShell extends Symbiote {
   isoMode = true;
-  sectionHtml = `<home-section></home-section>`;
+  sectionHtml = /*html*/ `<home-section></home-section>`;
   sectionTitle = '';
 
   changeLang(e) {
@@ -22,7 +22,7 @@ export default class AppShell extends Symbiote {
     this.sub('router/route', async (route) => {
       this.$.sectionHtml = 'Loading...';
       await import(`../../sections/${route}/${route}-section.js`);
-      this.$.sectionHtml = `<${route}-section></${route}-section>`;
+      this.$.sectionHtml = /*html*/ `<${route}-section></${route}-section>`;
     }, false);
   }
 }
