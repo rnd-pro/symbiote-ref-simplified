@@ -22,7 +22,7 @@ await import('./node-imports.js');
 console.log('SSR environment ready.');
 
 // Pre-read template parts:
-const tpl = fs.readFileSync('./node/mein-tpl.html', 'utf-8');
+const tpl = fs.readFileSync('./node/main-tpl.html', 'utf-8');
 const [head, tail] = tpl.split('{{CONTENT}}');
 
 /**
