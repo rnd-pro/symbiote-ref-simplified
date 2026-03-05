@@ -10,8 +10,14 @@ nav-menu {
   nav {
     display: flex;
     flex-direction: column;
+    gap: var(--gap-max);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
     gap: var(--gap-mid);
-    height: 100%;
+    text-decoration: none;
   }
 }
 `;

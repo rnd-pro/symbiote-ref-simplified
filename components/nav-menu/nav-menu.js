@@ -9,7 +9,9 @@ export default class NavMenu extends Symbiote {
 
   onNav(e) {
     e.preventDefault();
-    const route = e.target.getAttribute('route');
+    let el = e.target.closest('a');
+    if (!el) return;
+    const route = el.getAttribute('route');
     if (route) {
       AppRouter.navigate(route);
     }

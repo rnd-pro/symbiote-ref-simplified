@@ -3,7 +3,7 @@ import { css } from '@symbiotejs/symbiote';
 export default css`
 app-shell {
   display: grid;
-  grid-template-columns: 240px auto;
+  grid-template-columns: 200px auto;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     "header header"
