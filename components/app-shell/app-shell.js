@@ -20,7 +20,6 @@ export default class AppShell extends Symbiote {
     this.sub('app/currentLang', () => this.setTitle());
     this.sub('router/title', () => this.setTitle());
     this.sub('router/route', async (route) => {
-      this.$.sectionHtml = 'Loading...';
       await import(`../../sections/${route}/${route}-section.js`);
       this.$.sectionHtml = /*html*/ `<${route}-section></${route}-section>`;
     }, false);

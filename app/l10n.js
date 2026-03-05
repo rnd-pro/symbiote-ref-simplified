@@ -6,6 +6,10 @@ const l10nKeys = /** @type {const} */ ([
   'Home page',
   'Dashboard',
   'Settings',
+  'Theme',
+  'Dark',
+  'Light',
+  'Add a task...',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
@@ -16,12 +20,20 @@ const langMap = {
     'Home page': 'Домашняя страница',
     'Dashboard': 'Панель',
     'Settings': 'Настройки',
+    'Theme': 'Тема',
+    'Dark': 'Тёмная',
+    'Light': 'Светлая',
+    'Add a task...': 'Добавить задачу...',
   },
   es: {
     'Home': 'Casa',
     'Home page': 'Página de inicio',
     'Dashboard': 'Panel',
     'Settings': 'Configuración',
+    'Theme': 'Tema',
+    'Dark': 'Oscuro',
+    'Light': 'Claro',
+    'Add a task...': 'Agregar tarea...',
   },
 }
 

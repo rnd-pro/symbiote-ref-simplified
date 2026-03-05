@@ -9,6 +9,16 @@
   --gap-min: 2px;
   --gap-mid: 10px;
   --gap-max: 20px;
+
+  --ui-size: 38px;
+}
+
+.light-theme {
+  --text-color: #1e1e1e;
+  --bg-color: #e2e2e2;
+
+  --bg-light: rgba(0, 0, 0, .1);
+  --bg-dark: rgba(255, 255, 255, .2);
 }
 
 html, body {
@@ -24,6 +34,15 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+section {
+  opacity: 1;
+  transition: opacity .8s;
+
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 a {
