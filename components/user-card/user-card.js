@@ -7,6 +7,15 @@ export default class UserCard extends Symbiote {
   name = 'User';
   role = 'Member';
   avatar = 'star';
+  roleText = '';
+
+  renderCallback() {
+    let updateRole = () => {
+      this.$.roleText = this.$[`l10n/${this.$.role}`] || this.$.role;
+    };
+    this.sub('role', updateRole);
+    this.sub('app/currentLang', updateRole);
+  }
 }
 
 UserCard.rootStyles = styles;

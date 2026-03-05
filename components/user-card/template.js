@@ -6,6 +6,6 @@ export default html`
 </div>
 <div class="info">
   <span class="name" ${{textContent: 'name'}}></span>
-  <span class="role" ${{textContent: 'role'}}></span>
+  <span class="role" ${{textContent: 'roleText'}}></span>
 </div>
 `;

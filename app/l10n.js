@@ -10,30 +10,39 @@ const l10nKeys = /** @type {const} */ ([
   'Dark',
   'Light',
   'Add a task...',
+  'Admin',
+  'Editor',
+  'Viewer',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
 const langMap = {
   en: {},
   ru: {
-    'Home': 'Дом',
-    'Home page': 'Домашняя страница',
-    'Dashboard': 'Панель',
+    'Home': 'Главная',
+    'Home page': 'Главная страница',
+    'Dashboard': 'Панель управления',
     'Settings': 'Настройки',
     'Theme': 'Тема',
     'Dark': 'Тёмная',
     'Light': 'Светлая',
     'Add a task...': 'Добавить задачу...',
+    'Admin': 'Администратор',
+    'Editor': 'Редактор',
+    'Viewer': 'Наблюдатель',
   },
   es: {
-    'Home': 'Casa',
-    'Home page': 'Página de inicio',
+    'Home': 'Inicio',
+    'Home page': 'Página principal',
     'Dashboard': 'Panel',
-    'Settings': 'Configuración',
+    'Settings': 'Ajustes',
     'Theme': 'Tema',
     'Dark': 'Oscuro',
     'Light': 'Claro',
-    'Add a task...': 'Agregar tarea...',
+    'Add a task...': 'Añadir tarea...',
+    'Admin': 'Administrador',
+    'Editor': 'Editor',
+    'Viewer': 'Observador',
   },
 }
 
