@@ -14,8 +14,5 @@ let html = await SSR.processHtml('<app-shell></app-shell>', {
 SSR.destroy();
 
 const template = fs.readFileSync('./node/mein-tpl.html', 'utf-8');
-// Adjust paths for static file (relative to dist/):
-html = template
-  .replace('{{CONTENT}}', html)
-  .replaceAll('/dist/', './');
+html = template.replace('{{CONTENT}}', html);
 fs.writeFileSync('./dist/index.html', html);

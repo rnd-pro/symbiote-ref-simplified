@@ -47,10 +47,15 @@ function serveFile(filePath, res) {
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
 
-  // Static files from dist/ or source (app/, components/, sections/):
   if (url.pathname !== '/') {
-    let filePath = path.join(ROOT_DIR, url.pathname);
-    if (serveFile(filePath, res)) return;
+    // 1st: try dist/ (static assets served from root)
+    let distPath = path.join(DIST_DIR, url.pathname);
+    if (serveFile(distPath, res)) return;
+
+    // 2nd: try project root (app/, components/, sections/ for ESM)
+    let rootPath = path.join(ROOT_DIR, url.pathname);
+    if (serveFile(rootPath, res)) return;
+
     res.writeHead(404);
     res.end('Not found');
     return;

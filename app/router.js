@@ -2,16 +2,16 @@ import { AppRouter } from '@symbiotejs/symbiote/core/full.js';
 
 export const routes = {
   home: {
-    pattern: '/dist/',
+    pattern: '/',
     title: 'Home page',
     default: true,
   },
   dashboard: {
-    pattern: '/dist/dashboard/',
+    pattern: '/dashboard/',
     title: 'Dashboard',
   },
   settings: {
-    pattern: '/dist/settings/',
+    pattern: '/settings/',
     title: 'Settings',
   },
 }
