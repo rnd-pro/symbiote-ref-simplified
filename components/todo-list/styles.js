@@ -4,6 +4,7 @@ export default css`
 todo-list {
   display: block;
   max-width: 480px;
+  margin-bottom: var(--gap-max);
 
   .input-row {
     display: flex;

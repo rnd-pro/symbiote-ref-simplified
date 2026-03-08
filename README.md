@@ -1,6 +1,6 @@
 # Symbiote.js — Isomorphic App Reference
 
-> A complete reference app demonstrating **SSR streaming**, **client-side hydration**, and **shared state management** with [Symbiote.js](https://github.com/symbiotejs/symbiote.js) — a ~6 KB web component library with zero dependencies.
+> A reference app demonstrating **SSR streaming**, **client-side hydration**, and **shared state management** with [Symbiote.js](https://github.com/symbiotejs/symbiote.js) — a ~6 KB web component library with zero dependencies.
 
 ## Quick start
 

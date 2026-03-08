@@ -12,7 +12,7 @@
     "dev": "node ./node/server.js"
   },
   "dependencies": {
-    "@symbiotejs/symbiote": "^3.3.9",
+    "@symbiotejs/symbiote": "^3.4.1",
     "linkedom": "^0.18.12"
   },
   "devDependencies": {

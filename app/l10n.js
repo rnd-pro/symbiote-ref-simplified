@@ -13,6 +13,8 @@ const l10nKeys = /** @type {const} */ ([
   'Admin',
   'Editor',
   'Viewer',
+  'Server only',
+  'Client only',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
@@ -30,6 +32,8 @@ const langMap = {
     'Admin': 'Администратор',
     'Editor': 'Редактор',
     'Viewer': 'Наблюдатель',
+    'Server only': 'Только сервер',
+    'Client only': 'Только клиент',
   },
   es: {
     'Home': 'Inicio',
@@ -43,6 +47,8 @@ const langMap = {
     'Admin': 'Administrador',
     'Editor': 'Editor',
     'Viewer': 'Observador',
+    'Server only': 'Solo servidor',
+    'Client only': 'Solo cliente',
   },
 }
 
