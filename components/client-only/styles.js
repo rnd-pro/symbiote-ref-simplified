@@ -2,6 +2,7 @@ import { css } from '@symbiotejs/symbiote';
 
 export default css`
 client-only {
+  display: inline-block;
   .info-grid {
     display: grid;
     grid-template-columns: auto 1fr;

@@ -70,11 +70,11 @@ i-con {
 }
 
 [caption] {
-  display: inline-block;
   position: relative;
   padding: var(--gap-max);
   margin-bottom: var(--gap-max);
-  border: 1px solid currentColor;
+  margin-right: var(--gap-mid);
+  border: 1px dashed currentColor;
   border-radius: var(--radius-mid);
 
   &:empty {

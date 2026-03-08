@@ -15,6 +15,7 @@ const l10nKeys = /** @type {const} */ ([
   'Viewer',
   'Server only',
   'Client only',
+  'Isomorphic',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
@@ -34,6 +35,7 @@ const langMap = {
     'Viewer': 'Наблюдатель',
     'Server only': 'Только сервер',
     'Client only': 'Только клиент',
+    'Isomorphic': 'Изоморфный',
   },
   es: {
     'Home': 'Inicio',
@@ -49,6 +51,7 @@ const langMap = {
     'Viewer': 'Observador',
     'Server only': 'Solo servidor',
     'Client only': 'Solo cliente',
+    'Isomorphic': 'Isomórfico',
   },
 }
 
