@@ -10,6 +10,7 @@
   --gap-mid: 10px;
   --gap-max: 20px;
 
+  --radius-min: 4px;
   --radius-mid: 10px;
 
   --ui-size: 38px;
@@ -64,6 +65,39 @@ i-con {
 
     path {
       fill: currentColor;
+    }
+  }
+}
+
+[caption] {
+  display: inline-block;
+  position: relative;
+  padding: var(--gap-max);
+  margin-bottom: var(--gap-max);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-mid);
+
+  &:empty {
+    display: none;
+  }
+
+  &:before {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    top: 0;
+    left: var(--gap-mid);
+    content: attr(caption);
+    transform: translateY(-50%);
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: .2em .4em;
+    font-size: 0.85em;
+    font-style: italic;
+    border-radius: var(--radius-min);
+
+    &:empty {
+      display: none;
     }
   }
 }
