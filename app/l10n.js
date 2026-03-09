@@ -16,6 +16,8 @@ const l10nKeys = /** @type {const} */ ([
   'Server only',
   'Client only',
   'Isomorphic',
+  'Isomorphic Shadow DOM',
+  'Shadow button',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
@@ -36,6 +38,8 @@ const langMap = {
     'Server only': 'Только сервер',
     'Client only': 'Только клиент',
     'Isomorphic': 'Изоморфный',
+    'Isomorphic Shadow DOM': 'Изоморфный Shadow DOM',
+    'Shadow button': 'Теневая кнопка',
   },
   es: {
     'Home': 'Inicio',
@@ -52,6 +56,8 @@ const langMap = {
     'Server only': 'Solo servidor',
     'Client only': 'Solo cliente',
     'Isomorphic': 'Isomórfico',
+    'Isomorphic Shadow DOM': 'Isomórfico Shadow DOM',
+    'Shadow button': 'Botón de sombra',
   },
 }
 
