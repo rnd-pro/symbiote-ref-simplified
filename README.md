@@ -2,7 +2,7 @@
 
 > **SSR streaming → hydration → SPA** — all in one ~6 KB library, zero build tools, pure ESM.
 >
-> This reference app shows how [Symbiote.js](https://github.com/symbiotejs/symbiote.js) delivers isomorphic rendering with native import maps, reactive state across components, and Shadow DOM that works seamlessly with SSR — things that usually require heavy frameworks and complex toolchains.
+> This reference app shows how [Symbiote.js](https://github.com/symbiotejs/symbiote.js) delivers isomorphic/hybrid rendering with native import maps, reactive state across components, and Shadow DOM that works seamlessly with SSR — things that usually require heavy frameworks and complex toolchains.
 
 ## Quick start
 
