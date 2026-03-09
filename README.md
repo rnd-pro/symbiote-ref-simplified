@@ -4,6 +4,10 @@
 >
 > This reference app shows how [Symbiote.js](https://github.com/symbiotejs/symbiote.js) delivers isomorphic/hybrid rendering with native import maps, reactive state across components, and Shadow DOM that works seamlessly with SSR — things that usually require heavy frameworks and complex toolchains.
 
+LIVE DEMO: https://rnd-pro.github.io/symbiote-ref-simplified/
+
+> **Note:** The demo uses client-side routing with History API, so direct sub-page links will return 404 on GitHub Pages. Navigate from the home page instead.
+
 ## Quick start
 
 ```bash
