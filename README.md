@@ -1,6 +1,6 @@
 # Symbiote.js — Isomorphic App Reference
 
-> A reference app demonstrating **SSR streaming**, **client-side hydration**, and **shared state management** with [Symbiote.js](https://github.com/symbiotejs/symbiote.js) — a ~6 KB web component library with zero dependencies.
+> A simplified reference app demonstrating **SSR streaming**, **client-side hydration**, and **application state management** with [Symbiote.js](https://github.com/symbiotejs/symbiote.js) — a ~6 KB web component library with zero dependencies.
 
 ## Quick start
 
@@ -19,8 +19,8 @@ npm run ssr       # generates dist/index.html
 | Feature | Where | Key API |
 |---------|-------|---------|
 | **SSR streaming** | `node/server.js` | `SSR.renderToStream()` |
-| **Isomorphic hydration** | all components | `isoMode = true` |
-| **Named data context** | `app/app.js` | `PubSub.registerCtx({}, 'app')` |
+| **Isomorphic hydration** | all components except `client-only` and `server-only` | `isoMode = true` |
+| **Named data context** | `app/app.js`, `app/l10n.js`, `app/router.js` | `PubSub.registerCtx({}, 'app')` |
 | **Dynamic routing** | `app/router.js` | `AppRouter.initRoutingCtx()` |
 | **Lazy section loading** | `app-shell.js` | `await import(…)` on route change |
 | **Itemize API** | `todo-list`, `dashboard` | `itemize="app/toDoList"`, `item-tag` |
@@ -101,13 +101,13 @@ sym-article/
 
 **SSR → Hydration flow:**
 1. Server renders components to HTML (with `bind=` attributes preserved)
-2. Browser loads `browser-imports.js` → `iso.js` → registers all components
+2. Browser loads `browser-imports.js` → `iso.js` → registers all browser components
 3. Components detect existing children → `isoMode` activates `ssrMode` (skip template, bind to existing DOM)
 4. Client-side state mutations update DOM reactively
 
 ## Key patterns
 
-### Shared state via named context
+### Application state via named context
 
 ```javascript
 // app/app.js — register once
@@ -129,33 +129,23 @@ this.sub('app/toDoList', (items) => { ... });
 </div>
 ```
 
-Handlers accessible via `^` must be in the parent's `init$`, not class methods.
-
-### CSS-class theming
-
-```css
-:root { --bg-color: #323232; --text-color: #fff; }
-.light-theme { --bg-color: #e2e2e2; --text-color: #1e1e1e; }
-```
-```javascript
-document.documentElement.classList.toggle('light-theme', !isDark);
-```
+Handlers accessible with `^` (floating binding) must be in the parent's `init$`, not class methods (fallbacks to class props are not working in this case).
 
 ## What is excluded (for simplicity)
 
 > This is a reference app for educational purposes.
 
 - Build step (bundling, minification)
-- Localization maps optimization (index-based on-demand loading)
-- Asset generation for multiple routes (server-side routing)
-- Production error handling and security hardening
+- Localization maps optimization (index-based on-demand lazy loading)
+- Asset generation for multiple routes (sections, server-side routing)
+- Complete CSP setup
 
 ## Dependencies
 
 | Package | Purpose |
 |---------|---------|
 | `@symbiotejs/symbiote` | Web component library (~6 KB) |
-| `linkedom` | DOM implementation for SSR |
+| `linkedom` | DOM implementation for SSR, peer dependency |
 
 Zero frontend build tools. Pure ESM. Native import maps.
 
