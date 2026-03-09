@@ -18,6 +18,12 @@ export default css`
     color: var(--bg-color);
     font-size: 1.2em;
     cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
 
     i-con {
       display: inline-flex;
