@@ -37,8 +37,8 @@ jobs:
       - name: Prepare pages artifact
         run: |
           mkdir -p _site
-          cp dist/index.html dist/globals.css dist/browser-imports.js _site/
-          cp -r app components sections _site/
+          cp -r dist app components sections _site/
+          echo '<meta http-equiv="refresh" content="0;url=dist/index.html">' > _site/index.html
 
       - uses: actions/upload-pages-artifact@v3
 
