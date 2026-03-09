@@ -8,6 +8,10 @@ export default html`
     <shadow-dom ${{'@caption': 'l10n/Isomorphic Shadow DOM'}}>
       <p>This is Light DOM content (inside the slot).</p>
     </shadow-dom>
+    <div ${{'@caption': 'l10n/Shared context'}}>
+      <shared-ctx ctx="my-ctx"></shared-ctx>
+      <shared-ctx ctx="my-ctx"></shared-ctx>
+    </div>
     <todo-list ${{'@caption': 'l10n/Isomorphic'}}></todo-list>
   </section>
 `;

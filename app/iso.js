@@ -8,3 +8,4 @@ import '../components/i-con/i-con.js';
 import '../components/todo-list/todo-list.js';
 import '../components/user-card/user-card.js';
 import '../components/shadow-dom/shadow-dom.js';
+import '../components/shared-ctx/shared-ctx.js';

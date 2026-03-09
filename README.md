@@ -118,7 +118,7 @@ this.$['app/darkTheme'] = false;
 this.sub('app/toDoList', (items) => { ... });
 ```
 
-### Itemize with custom item-tag
+### Itemize with custom item-tag and pop-up binding `^prop`
 
 ```html
 <div itemize="app/toDoList" item-tag="list-item">
@@ -130,6 +130,14 @@ this.sub('app/toDoList', (items) => { ... });
 ```
 
 Handlers accessible with `^` (floating binding) must be in the parent's `init$`, not class methods (fallbacks to class props are not working in this case).
+
+### Computed properties `+prop` and attribute binding `@prop`
+
+`i-con` component.
+
+### Shared data context `*prop`
+
+`shared-ctx` component.
 
 ## What is excluded (for simplicity)
 

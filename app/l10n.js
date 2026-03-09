@@ -18,6 +18,7 @@ const l10nKeys = /** @type {const} */ ([
   'Isomorphic',
   'Isomorphic Shadow DOM',
   'Shadow button',
+  'Shared context',
 ]);
 
 /** @type {Record<string, Partial<Record<typeof l10nKeys[number], string>>>} */
@@ -40,6 +41,7 @@ const langMap = {
     'Isomorphic': 'Изоморфный',
     'Isomorphic Shadow DOM': 'Изоморфный Shadow DOM',
     'Shadow button': 'Теневая кнопка',
+    'Shared context': 'Общий контекст',
   },
   es: {
     'Home': 'Inicio',
@@ -58,6 +60,7 @@ const langMap = {
     'Isomorphic': 'Isomórfico',
     'Isomorphic Shadow DOM': 'Isomórfico Shadow DOM',
     'Shadow button': 'Botón de sombra',
+    'Shared context': 'Contexto compartido',
   },
 }
 
