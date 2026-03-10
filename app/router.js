@@ -1,5 +1,5 @@
 import { AppRouter } from '@symbiotejs/symbiote/core/full.js';
-import '../sections/home/home-section.js'; // Synchronous import for default route and SSR.
+import '../sections/home/home-section.js'; // Synchronous import for default route in SSR runtime.
 
 export const routes = {
   home: {
