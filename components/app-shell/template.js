@@ -6,7 +6,7 @@ export default html`
     <img src="https://rnd-pro.com/svg/symbiote/index.svg" alt="Symbiote.js" width="36">
     <span ${{textContent: 'app/appTitle'}}></span>
   </div>
-  <span ${{textContent: 'sectionTitle'}}></span>
+  <span ${{textContent: '+sectionTitle'}}></span>
   <select ${{onchange: 'changeLang'}}>
     <option value="en">English</option>
     <option value="es">Español</option>
@@ -14,7 +14,7 @@ export default html`
   </select>
 </header>
 <nav-menu></nav-menu>
-<main ${{innerHTML: 'sectionHtml'}}></main>
+<main ${{innerHTML: '+sectionHtml'}}></main>
 <footer>
   <span>&copy; ${new Date().getFullYear()}</span>
   <a href="https://rnd-pro.com" target="_blank">rnd-pro.com</a>

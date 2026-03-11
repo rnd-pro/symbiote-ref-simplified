@@ -4,23 +4,19 @@ import styles from './styles.js';
 
 export default class AppShell extends Symbiote {
   isoMode = true;
-  sectionHtml = /*html*/ `<home-section></home-section>`;
-  sectionTitle = '';
+  init$ = {
+    '+sectionTitle': {
+      deps: ['router/title', 'app/currentLang'],
+      fn: () => this.$[`l10n/${this.$['router/title']}`] || this.$['router/title'] || '',
+    },
+    '+sectionHtml': {
+      deps: ['router/route'],
+      fn: () => /*html*/ `<${this.$['router/route']}-section></${this.$['router/route']}-section>`,
+    }
+  }
 
   changeLang(e) {
     this.$['app/currentLang'] = e.target.value;
-  }
-
-  setTitle() {
-    this.$.sectionTitle = this.$[`l10n/${this.$['router/title']}`] || this.$['router/title'] || '';
-  }
-
-  renderCallback() {
-    this.sub('app/currentLang', () => this.setTitle());
-    this.sub('router/title', () => this.setTitle());
-    this.sub('router/route', (route) => {
-      this.$.sectionHtml = /*html*/ `<${route}-section></${route}-section>`;
-    }, false);
   }
 }
 
