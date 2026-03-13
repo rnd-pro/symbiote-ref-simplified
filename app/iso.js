@@ -1,4 +1,5 @@
 // Isomorphic modules
+import '@symbiotejs/symbiote/core/devMessages.js';
 import '../app/app.js';
 import '../app/l10n.js';
 import '../app/router.js';
